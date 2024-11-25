@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 24: end of line expected.
+    {size =+10} "Начать игру?" {/size}
+                               ^
+
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Mon Nov 25 22:37:31 2024

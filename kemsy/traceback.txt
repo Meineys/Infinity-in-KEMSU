@@ -1,0 +1,33 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 24, in script
+    menu:
+Exception: Open text tag at end of string '{color=#FF0000} Начать игру? {/color'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 24, in script
+    menu:
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\ast.py", line 1615, in execute
+    renpy.exports.say(None, "\n".join(narration), interact=False)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\exports\sayexports.py", line 132, in say
+    who(what, *args, **kwargs)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 1455, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 1106, in do_display
+    display_say(who,
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 785, in display_say
+    what_text.update()
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 2298, in update
+    tokens = self.tokenize(text)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 2815, in tokenize
+    tokens.extend(textsupport.tokenize(i))
+  File "textsupport.pyx", line 188, in renpy.text.textsupport.tokenize
+Exception: Open text tag at end of string '{color=#FF0000} Начать игру? {/color'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.3.24111502
+kemsy 1.0
+Mon Nov 25 22:47:51 2024
