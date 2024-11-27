@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 24: end of line expected.
-    {size =+10} "Начать игру?" {/size}
-                               ^
+File "game/script.rpy", line 41: expected end of line
+    stop music heart
+               ^
+
+File "game/script.rpy", line 71: expected end of line
+    stop music morning
+               ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Nov 25 22:37:31 2024
+Wed Nov 27 18:00:41 2024

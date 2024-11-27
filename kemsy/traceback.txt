@@ -1,33 +1,70 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 24, in script
-    menu:
-Exception: Open text tag at end of string '{color=#FF0000} Начать игру? {/color'.
+While processing text tag {cps=60Возможно, в следующий раз булочки и поход на пару проф.деятельности спасут мир.{/cps} in '{cps=60Возможно, в следующий раз булочки и поход на пару проф.деятельности спасут мир.{/cps}'.:
+  File "game/script.rpy", line 81, in script
+    "{cps=60Возможно, в следующий раз булочки и поход на пару проф.деятельности спасут мир.{/cps}"
+ValueError: could not convert string to float: '60Возможно, в следующий раз булочки и поход на пару проф.деятельности спасут мир.{/cps'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 24, in script
-    menu:
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\ast.py", line 1615, in execute
-    renpy.exports.say(None, "\n".join(narration), interact=False)
+  File "game/script.rpy", line 81, in script
+    "{cps=60Возможно, в следующий раз булочки и поход на пару проф.деятельности спасут мир.{/cps}"
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\ast.py", line 2573, in execute
+    Say.execute(self)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
   File "C:\XboxGames\renpy-8.3.3-sdk\renpy\exports\sayexports.py", line 132, in say
     who(what, *args, **kwargs)
   File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 1455, in __call__
     self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
   File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 1106, in do_display
     display_say(who,
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 785, in display_say
-    what_text.update()
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 2298, in update
-    tokens = self.tokenize(text)
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 2815, in tokenize
-    tokens.extend(textsupport.tokenize(i))
-  File "textsupport.pyx", line 188, in renpy.text.textsupport.tokenize
-Exception: Open text tag at end of string '{color=#FF0000} Начать игру? {/color'.
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\character.py", line 803, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\core.py", line 2879, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\core.py", line 1381, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\display\layout.py", line 1457, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 2604, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 733, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\text\text.py", line 1482, in segment
+    ts.cps = float(value)
+ValueError: could not convert string to float: '60Возможно, в следующий раз булочки и поход на пару проф.деятельности спасут мир.{/cps'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24111502
-kemsy 1.0
-Mon Nov 25 22:47:51 2024
+Бесконечность в КемГУ 0.1
+Wed Nov 27 21:22:58 2024
