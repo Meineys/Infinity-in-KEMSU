@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 41: expected end of line
-    stop music heart
-               ^
+File "game/script.rpy", line 143: if statement expects a non-empty block.
+    if banan:
+             ^
 
-File "game/script.rpy", line 71: expected end of line
-    stop music morning
-               ^
+File "game/script.rpy", line 145: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Nov 27 18:00:41 2024
+Mon Dec  2 17:56:46 2024
