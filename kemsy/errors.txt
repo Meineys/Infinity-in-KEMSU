@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 143: if statement expects a non-empty block.
-    if banan:
-             ^
-
-File "game/script.rpy", line 145: expected statement.
-    else:
-        ^
+File "game/script.rpy", line 105: choice menuitem expects a non-empty block.
+    "Выбросить банан":
+                      ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Dec  2 17:56:46 2024
+Wed Dec  4 08:39:54 2024

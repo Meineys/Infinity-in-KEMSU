@@ -5,6 +5,7 @@ define n = Character('Настя', color="#00BFFF",what_prefix = "{i}")
 define a = Character('Артем', color="#C0C0C0",what_prefix = "{i}")
 define d = Character("Даниэла", color="#D8BFD8",what_prefix = "{i}")
 define a = Character('Ариадна', color="#00BFFF",what_prefix = "{i}")
+define p = Character('Пасютин А.С', color="#4682B4",what_prefix = "{i}")
 #Музыка и звуки 
 define audio.beginning = "audio/beginning.ogg" #начало
 define audio.heart = "audio/heart.mp3" #выбор
@@ -90,7 +91,7 @@ label end_2: #концовка 2
     "Концовка : Взрывной сон."
     return
 
-label choice_2:
+label choice_2:#2 выбор
     i "{cps=60}(зевает) Я так плохо спал… Сколько сейчас времени? {w} (смотрит на телефон) 07:50… ЧЁРТ! {w} Я же снова опаздываю на проф.деятельность!{/cps}"
     i "{cps=60}Нужно быстро собираться.{w} Первым делом — умоюсь. {w} Надо ещё не забыть разбудить Даниэлу...{/cps}"
     i "{cps=60}Ну вот, теперь можно и к Даниэле.{/cps}"
@@ -102,10 +103,13 @@ label choice_2:
     i "{cps=60}ашалеть,{w} кто оставил тут банан{/cps}?"
     menu:
         "Выбросить банан":
-             jump choice_3
+            $ banan = 0
+            jump choice_3
+            
         "Пройти мимо":
-             jump choice_3
-             $ banan = True
+            $ banan = 1
+            jump choice_3
+           
     return
 label end_3:#3 концовка
     scene black with fade 
@@ -121,12 +125,13 @@ label end_3:#3 концовка
     pause
     "Концовка: Нелепая смерть"
     return 
+
 label choice_3: #3 выбор
-     scene black with fade
-    if banan == False:
-        $ renpy.notify("Игорь выбросил банан") #уведомление в игре
-    else:
+    scene black with fade
+    if banan == 1:
         $ renpy.notify("Игорь не выбросил банан") #уведомление в игре
+    else:
+        $ renpy.notify("Игорь выбросил банан") #уведомление в игре
 
     scene danilka with fade 
     with vpunch
@@ -140,14 +145,29 @@ label choice_3: #3 выбор
     i "{cps=60}Дани…{/cps}"
     d "{cps=60}УЖЕ ОДЕВАЮСЬ!{/cps}"
     i "{cps=60}Фух…{w} Пойду пока умоюсь, а ты собирайся быстрее!{/cps}"
-    scene koridor with fade
-    i "{cps=60}И о чём я вообще думаю, Даниэля никогда бы не ушла на пары без меня,{w} она же моя {b}лучшая подруга{b}...{/cps}"
-    if banan == True:
+    if banan == 1:
+        scene koridor with fade
+        i "{cps=60}И о чём я вообще думаю, Даниэля никогда бы не ушла на пары без меня,{w} она же моя {b}лучшая подруга{b}...{/cps}"
         jump end_3
     else:
+        scene koridor1 with fade
+        i "{cps=60}И о чём я вообще думаю, Даниэля никогда бы не ушла на пары без меня,{w} она же моя {b}лучшая подруга{b}...{/cps}"
         $ renpy.notify("Игорь не упал на банан") #уведомление в игре
-    scene ymalka with fade
-    "{cps=60}Игорь подходит к зеркалу, видит отражение… {w} и своего преподавателя Александра.{/cps}"
-    i "{cps=60}А… что…?{/cps}"
-    "протирает глаза, преподаватель не исчезает"
+        scene ymalka with fade
+        with hpunch
+        "{cps=60}Игорь подходит к зеркалу, видит отражение… {w} и своего преподавателя Александра.{/cps}"
+        i "{cps=60}А… что…?{/cps}"
+        "протирает глаза, преподаватель не исчезает"
+        p "{cps=60}Игорь, а ты чего не на паре?{/cps}"
+        i "{cps=60}Эм… {w} а вы…?{/cps}"
+        p "..."
+        i "..."
+        p "..."
+        i "..."
+        scene koridor1 with fade
+        "Игорь быстро убегает за Даниэлой."
+    
+        
+  
+    
     return
