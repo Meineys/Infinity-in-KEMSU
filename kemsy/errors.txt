@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 105: choice menuitem expects a non-empty block.
-    "Выбросить банан":
-                      ^
+File "game/script.rpy", line 205: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+            i "{spc=60}Пока нет, не знаем,что выбрать.Может,вы подскажете{/cps}?
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Dec  4 08:39:54 2024
+Wed Dec  4 20:13:48 2024
