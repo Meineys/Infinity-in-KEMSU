@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 105: choice menuitem expects a non-empty block.
-    "Выбросить банан":
-                      ^
+File "game/script.rpy", line 426: expected 'image_name_component' not found.
+    scene with fade ulica
+          ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Dec  4 08:39:54 2024
+Sat Dec  7 14:32:05 2024
