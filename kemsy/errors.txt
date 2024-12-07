@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 447: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-            n "{cps=60}Я пошла зака...{/cps}
+File "game/script.rpy", line 473: expected statement.
+    renpy.notify("Прибыл годжо сатору")
+                                       ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Sat Dec  7 20:35:36 2024
+Sat Dec  7 21:27:50 2024
