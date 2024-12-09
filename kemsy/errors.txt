@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 105: choice menuitem expects a non-empty block.
-    "Выбросить банан":
-                      ^
+File "game/screens.rpy", line 367: the action keyword argument was not given a value.
+    hotspot(469, 60, 1524, 134) action
+                                      ^
 
 Ren'Py Version: Ren'Py 8.3.3.24111502
-Wed Dec  4 08:39:54 2024
+Tue Dec 10 00:35:34 2024

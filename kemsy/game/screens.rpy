@@ -353,27 +353,21 @@ screen main_menu():
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
     tag menu
+    imagemap:
+        ground "gui/main_menu.png"
+        idle "gui/menu_normal.png"
+        hover "gui/menu_hover.png"
 
-    add gui.main_menu_background
+        hotspot(120, 211, 306, 117) action Start()
+        hotspot(120, 327, 437, 117) action ShowMenu("load")
+        hotspot(120, 448, 456, 117) action ShowMenu("preferences")
+        hotspot(120, 564, 327, 117) action ShowMenu("about")
+        hotspot(120, 917, 275, 117) action Quit(confirm=True)
+        hotspot(1698, 987, 270, 61) action ShowMenu("help")
+        
 
-    ## Эта пустая рамка затеняет главное меню.
-    frame:
-        style "main_menu_frame"
+        
 
-    ## Оператор use включает отображение другого экрана в данном. Актуальное
-    ## содержание главного меню находится на экране навигации.
-    use navigation
-
-    if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
 
 
 style main_menu_frame is empty
