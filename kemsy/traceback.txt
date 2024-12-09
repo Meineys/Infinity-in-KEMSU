@@ -1,28 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 126, in script
-    if  $ banan == False:
-SyntaxError: invalid syntax (game/script.rpy, line 126)
+  File "game/script.rpy", line 501, in script
+    play sound hours
+  File "renpy/common/000statements.rpy", line 301, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 501, in <module>
+    play sound hours
+NameError: name 'hours' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 126, in script
-    if  $ banan == False:
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "C:\XboxGames\renpy-8.3.3-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/script.rpy, line 126)
+  File "game/script.rpy", line 501, in script
+    play sound hours
+  File "D:\renpy-8.3.3-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "D:\renpy-8.3.3-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\renpy-8.3.3-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 301, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "D:\renpy-8.3.3-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "D:\renpy-8.3.3-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 501, in <module>
+    play sound hours
+NameError: name 'hours' is not defined
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.3.24111502
 Бесконечность в КемГУ 0.1
-Mon Dec  2 18:07:58 2024
+Mon Dec  9 14:00:16 2024
