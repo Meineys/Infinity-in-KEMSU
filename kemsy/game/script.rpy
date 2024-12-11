@@ -225,16 +225,14 @@ label choice_3: #3 выбор
         i "{cps=60}{sc}ДА ГДЕ ЭТИ…{/sc}{/cps}"
 
         # Появление Насти и Артема
-        # show n at right with moveoutright
-        # show a at left with moveoutleft
         i "{cps=60}Оо {w}, пришли друзья мои, {sc}ВЫ ВРЕМЯ ВИДЕЛИ {/sc}, мы опаздываем уже на 10 минут!{/cps}"
-        hide i
+        hide i 
         hide d
-        #show a at left
+        show a at left with moveoutleft
+        show n at right with moveoutleft
         a "{cps=60}Привет, привет.{/cps}"
-        #show n at right
         n "{cps=60}Привет!{/cps}"
-        #show d
+        show d
         stop music fadeout 2
         d "{cps=60}{sc=5}ппппривет... ммможет мы уже ззайдём?{/sc}{/cps}"
         scene kabme with fade #кабинет Пасютина (мы)
