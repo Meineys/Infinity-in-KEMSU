@@ -358,12 +358,12 @@ screen main_menu():
         idle "gui/menu_normal.png"
         hover "gui/menu_hover.png"
 
-        hotspot(120, 211, 306, 117) action Start()
-        hotspot(120, 327, 437, 117) action ShowMenu("load")
-        hotspot(120, 448, 456, 117) action ShowMenu("preferences")
-        hotspot(120, 564, 327, 117) action ShowMenu("about")
-        hotspot(120, 917, 275, 117) action Quit(confirm=True)
-        hotspot(1698, 987, 270, 61) action ShowMenu("help")
+        hotspot(120, 227, 316, 90) action Start()
+        hotspot(120, 343, 428, 90) action ShowMenu("load")
+        hotspot(120, 464, 480, 90) action ShowMenu("preferences")
+        hotspot(120, 564, 340, 90) action ShowMenu("about")
+        hotspot(120, 932, 270, 90) action Quit(confirm=True)
+        hotspot(1698, 987 , 200, 61) action ShowMenu("help")
         
 
         
